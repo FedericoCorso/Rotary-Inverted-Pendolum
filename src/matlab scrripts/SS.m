@@ -1,6 +1,9 @@
 clear 
 close all 
 
+% to check also the phd thesis on the control of the inverted pendolum to
+% find the problem with the values of our matrices.
+
 %% model parameters
 % from  file: 04_InvertedPendulum_UserManual.pdf
 B_p = 0.0024; % Pendulum viscous damping coeffi- cient as seen at the pivot axis N*m*s/rad
@@ -22,7 +25,7 @@ k_m = 7.68e-3; % Motor back-emf constant V/(rad/s)
 k_t = 7.68e-3; % Motor current-torque constant N*m/A
 
 %% build the state space matrices
-[A,B,C,D] = SS_Matrices(B_p,B_r,J_a,J_p,K_g,R_m,eta_g,eta_m,g,k_m,k_t,l_p,m_p,r);
+[A,B,C,D] = SS_Matrices(B_p,B_r,J_a,J_p,K_g,L_p,R_m,eta_g,eta_m,g,k_m,k_t,m_p,r)
 
 % State-space model
 system = ss(A,B,C,D);
