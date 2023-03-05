@@ -13,7 +13,7 @@ J_p = 0.0012; % Pendulum moment of intertia about center of mass Kg*m^2
 l_p = 0.156; % Distance from pivot to center of mass m
 m_p = 0.127; % Mass of pendulum Kg
 r = 0.216; % Rotary arm length from pivot to tip m
-J_T = 2*(J_a*m_p*l_p^2 + J_p*m_p*r^2 + J_a*J_p);
+J_T = (J_a*m_p*l_p^2 + J_p*m_p*r^2 + J_a*J_p); 
 g = 9.81; % m/s^2
 
 % from file: 03_ServoBaseUnit_UserManual.pdf
