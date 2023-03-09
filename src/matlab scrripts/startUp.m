@@ -1,4 +1,4 @@
-%% run this script to load pendulum physical parameters in the base Workspace
+%% This script load pendulum physical parameters in the base Workspace
 clear 
 close all 
 

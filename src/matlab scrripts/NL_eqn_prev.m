@@ -1,5 +1,7 @@
-function x_dot = NL_eqns(x,tau,B_p,B_r,J_a,J_p,g,l_p,m_p,r)
+function x_dot = NL_eqns_prev(t,x,V_m,B_p,B_r,J_a,J_p,g,l_p,m_p,r,K_g,R_m,eta_g,eta_m,k_m,k_t)
 % Simulation of the non linear system
+
+tau = eta_g*K_g*eta_m*k_t*(V_m-K_g*k_m*x(3,1))/R_m;
 
 t2 = cos(x(2,1));
 t3 = sin(x(2,1));
