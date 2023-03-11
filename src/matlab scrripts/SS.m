@@ -8,7 +8,7 @@ close all
 % [A,B,C,D] = SS_Matrices_Torque_Stable(B_p,B_r,J_T,J_a,J_p,g,l_p,m_p,r);
 % [A,B,C,D] = SS_Matrices_Torque_Unstable(B_p,B_r,J_T,J_a,J_p,g,l_p,m_p,r);
 C = eye(4);
-D = zeros(4,1)
+D = zeros(4,1);
 % State-space model
 system = ss(A,B,C,D);
 
