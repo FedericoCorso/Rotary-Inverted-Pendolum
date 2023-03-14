@@ -1,13 +1,16 @@
 %% simulation of the NL equations - Variable Step solver
 
 startUp
+% substutute identified values
+B_p = 6.000082177832833e-04;
+B_r = 0.0012;
 
 x0 = [0;pi/2;0;0]; % initial conditions
 V_m = 0; % Input voltage applied to the system
 
 % Time integration parameters
 Ts_VSS      =       0.001;              % sampling time (s)
-Tend_VSS    =       5;                  % final time (s)
+Tend_VSS    =       21;                  % final time (s)
 tsim_VSS    =       0:Ts_VSS:Tend_VSS;  % time vector (s)
 Nsim_VSS = Tend_VSS/Ts_VSS; 
 
