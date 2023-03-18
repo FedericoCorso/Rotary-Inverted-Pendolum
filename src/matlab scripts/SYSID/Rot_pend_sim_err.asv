@@ -33,29 +33,28 @@ zhat_FFD(:,1) = z0; % initial state
 for ind=2:Nsim_FFD
     zdot = NL_eqns(0,zhat_FFD(:,ind-1),uin(:,ind-1),th);
     zhat_FFD(:,ind)    =   zhat_FFD(:,ind-1)+Ts*zdot;
-
 end
 
 %% Run simulation with ode45
-% Ts_VSS = 0.002; % 2ms
-% Nsim_VSS = size(ymeas,2);% number of measured samples
-% zhat_VSS = zeros(4,Nsim_VSS); % matrix to contain the trajectories
-% zhat_VSS(:,1) = z0;
-% 
-% for ind = 1:Nsim_VSS
-%     temp = ode45(@(t,z)NL_eqns(t,z,uin(:,ind),th),[0 Ts_VSS],zhat_VSS(:,ind));
-%     zhat_VSS(:,ind+1) = temp.y(:,end);
-% end
+Ts_VSS = 0.002; % 2ms
+Nsim_VSS = size(ymeas,2);% number of measured samples
+zhat_VSS = zeros(4,Nsim_VSS); % matrix to contain the trajectories
+zhat_VSS(:,1) = z0;
+
+for ind = 1:Nsim_VSS
+    temp = ode45(@(t,z)NL_eqns(t,z,uin(:,ind),th),[0 Ts_VSS],zhat_VSS(:,ind));
+    zhat_VSS(:,ind+1) = temp.y(:,end);
+end
 
 %% Collect simulated output (forward speed and yawrate)
 % ysim = [zhat_FFD(1,:); zhat_FFD(2,:)]; % the measured output is equal to the state
 
-ysim = zhat_FFD;
-% ysim = zhat_VSS(:,end-1);
+%ysim = zhat_FFD;
+ysim = zhat_VSS();
 %% compute weighted error
 err = Q*(ymeas-ysim);
 
 %% stack errors in one vector
-err_vec = [err(1,:) err(2,:) err(3,:) err(4,:)]'/sqrt(Nsim_FFD); % err(3,:) err(4,:)
-% err_vec = [err(1,:) err(2,:)]'/sqrt(Nsim_VSS); % err(3,:) err(4,:)
+% err_vec = [err(1,:) err(2,:)]'/sqrt(Nsim_FFD); % err(3,:) err(4,:)
+err_vec = [err(1,:) err(2,:)]'/sqrt(Nsim_VSS); % err(3,:) err(4,:)
 end
