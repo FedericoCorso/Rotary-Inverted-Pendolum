@@ -1,0 +1,50 @@
+# CompilerName=clang
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/maci64
+matlabdir = /Applications/MATLAB_R2022b.app
+startdir = /Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp
+
+# Toolchain information
+cc = /usr/bin/xcrun -sdk macosx13.1 clang
+cxx = /usr/bin/xcrun -sdk macosx13.1 clang++
+linker = /usr/bin/xcrun -sdk macosx13.1 clang
+linkerxx = /usr/bin/xcrun -sdk macosx13.1 clang++
+
+cflags =  -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=Pendulum_cost_constr_mex -c 
+
+cxxflags =  -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fobjc-arc -std=c++11 -stdlib=libc++ -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=Pendulum_cost_constr_mex -c 
+
+ldflags =  -Wl,-twolevel_namespace -undefined error -arch x86_64 -mmacosx-version-min=10.15 -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -bundle   -L"$matlabdir/bin/maci64" -lmx -lmex -lmat -lc++  -Wl,-rpath,@loader_path -o Pendulum_cost_constr_mex.mexmaci64 -L"$matlabdir/bin/maci64" -lmwblas -lemlrt -lcovrt -lut -lmwmathutil  -Wl,-exported_symbols_list,Pendulum_cost_constr_mex.map
+
+linkobjs = 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker $in $linkobjs $ldflags
+
+rule linkxx
+    command = $linkerxx $in $linkobjs $ldflags
+
+# Build
+build $builddir/Pendulum_cost_constr_data.o : cc $root/Pendulum_cost_constr_data.c
+build $builddir/rt_nonfinite.o : cc $root/rt_nonfinite.c
+build $builddir/Pendulum_cost_constr_initialize.o : cc $root/Pendulum_cost_constr_initialize.c
+build $builddir/Pendulum_cost_constr_terminate.o : cc $root/Pendulum_cost_constr_terminate.c
+build $builddir/Pendulum_cost_constr.o : cc $root/Pendulum_cost_constr.c
+build $builddir/_coder_Pendulum_cost_constr_api.o : cc $root/interface/_coder_Pendulum_cost_constr_api.c
+build $builddir/_coder_Pendulum_cost_constr_mex.o : cc $root/interface/_coder_Pendulum_cost_constr_mex.c
+build $builddir/_coder_Pendulum_cost_constr_info.o : cc $root/interface/_coder_Pendulum_cost_constr_info.c
+build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
+
+# Link
+build $root/Pendulum_cost_constr_mex.mexmaci64 : link $builddir/Pendulum_cost_constr_data.o $builddir/rt_nonfinite.o $builddir/Pendulum_cost_constr_initialize.o $builddir/Pendulum_cost_constr_terminate.o $builddir/Pendulum_cost_constr.o $builddir/_coder_Pendulum_cost_constr_api.o $builddir/_coder_Pendulum_cost_constr_mex.o $builddir/_coder_Pendulum_cost_constr_info.o $builddir/c_mexapi_version.o 

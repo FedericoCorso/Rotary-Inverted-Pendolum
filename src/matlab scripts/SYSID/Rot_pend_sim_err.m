@@ -38,7 +38,6 @@ zhat_FFD_corrected(:,1) = [ymeas(1,1);ymeas(2,1);0;0];
 for ind=2:Nsim_FFD
     zdot = NL_eqns(0,zhat_FFD(:,ind-1),uin(:,ind-1),th);
     zhat_FFD(:,ind)    =   zhat_FFD(:,ind-1)+Ts*zdot;
-
 end
 
 %% Simulation of the linear model

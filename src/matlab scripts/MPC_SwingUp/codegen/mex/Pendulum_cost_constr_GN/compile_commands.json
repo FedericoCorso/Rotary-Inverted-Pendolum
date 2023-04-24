@@ -1,0 +1,56 @@
+[
+  {
+    "directory": "/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp/codegen/mex/Pendulum_cost_constr_GN",
+    "command": "/usr/bin/xcrun -sdk macosx13.1 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp\" -I \"./interface\" -I \"/Applications/MATLAB_R2022b.app/extern/include\" -I \".\" -DMODEL=Pendulum_cost_constr_GN_mex -c  Pendulum_cost_constr_GN_data.c -o build/maci64/Pendulum_cost_constr_GN_data.o",
+    "file": "Pendulum_cost_constr_GN_data.c",
+    "output": "build/maci64/Pendulum_cost_constr_GN_data.o"
+  },
+  {
+    "directory": "/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp/codegen/mex/Pendulum_cost_constr_GN",
+    "command": "/usr/bin/xcrun -sdk macosx13.1 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp\" -I \"./interface\" -I \"/Applications/MATLAB_R2022b.app/extern/include\" -I \".\" -DMODEL=Pendulum_cost_constr_GN_mex -c  rt_nonfinite.c -o build/maci64/rt_nonfinite.o",
+    "file": "rt_nonfinite.c",
+    "output": "build/maci64/rt_nonfinite.o"
+  },
+  {
+    "directory": "/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp/codegen/mex/Pendulum_cost_constr_GN",
+    "command": "/usr/bin/xcrun -sdk macosx13.1 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp\" -I \"./interface\" -I \"/Applications/MATLAB_R2022b.app/extern/include\" -I \".\" -DMODEL=Pendulum_cost_constr_GN_mex -c  Pendulum_cost_constr_GN_initialize.c -o build/maci64/Pendulum_cost_constr_GN_initialize.o",
+    "file": "Pendulum_cost_constr_GN_initialize.c",
+    "output": "build/maci64/Pendulum_cost_constr_GN_initialize.o"
+  },
+  {
+    "directory": "/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp/codegen/mex/Pendulum_cost_constr_GN",
+    "command": "/usr/bin/xcrun -sdk macosx13.1 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp\" -I \"./interface\" -I \"/Applications/MATLAB_R2022b.app/extern/include\" -I \".\" -DMODEL=Pendulum_cost_constr_GN_mex -c  Pendulum_cost_constr_GN_terminate.c -o build/maci64/Pendulum_cost_constr_GN_terminate.o",
+    "file": "Pendulum_cost_constr_GN_terminate.c",
+    "output": "build/maci64/Pendulum_cost_constr_GN_terminate.o"
+  },
+  {
+    "directory": "/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp/codegen/mex/Pendulum_cost_constr_GN",
+    "command": "/usr/bin/xcrun -sdk macosx13.1 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp\" -I \"./interface\" -I \"/Applications/MATLAB_R2022b.app/extern/include\" -I \".\" -DMODEL=Pendulum_cost_constr_GN_mex -c  Pendulum_cost_constr_GN.c -o build/maci64/Pendulum_cost_constr_GN.o",
+    "file": "Pendulum_cost_constr_GN.c",
+    "output": "build/maci64/Pendulum_cost_constr_GN.o"
+  },
+  {
+    "directory": "/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp/codegen/mex/Pendulum_cost_constr_GN",
+    "command": "/usr/bin/xcrun -sdk macosx13.1 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp\" -I \"./interface\" -I \"/Applications/MATLAB_R2022b.app/extern/include\" -I \".\" -DMODEL=Pendulum_cost_constr_GN_mex -c  interface/_coder_Pendulum_cost_constr_GN_api.c -o build/maci64/_coder_Pendulum_cost_constr_GN_api.o",
+    "file": "interface/_coder_Pendulum_cost_constr_GN_api.c",
+    "output": "build/maci64/_coder_Pendulum_cost_constr_GN_api.o"
+  },
+  {
+    "directory": "/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp/codegen/mex/Pendulum_cost_constr_GN",
+    "command": "/usr/bin/xcrun -sdk macosx13.1 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp\" -I \"./interface\" -I \"/Applications/MATLAB_R2022b.app/extern/include\" -I \".\" -DMODEL=Pendulum_cost_constr_GN_mex -c  interface/_coder_Pendulum_cost_constr_GN_mex.c -o build/maci64/_coder_Pendulum_cost_constr_GN_mex.o",
+    "file": "interface/_coder_Pendulum_cost_constr_GN_mex.c",
+    "output": "build/maci64/_coder_Pendulum_cost_constr_GN_mex.o"
+  },
+  {
+    "directory": "/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp/codegen/mex/Pendulum_cost_constr_GN",
+    "command": "/usr/bin/xcrun -sdk macosx13.1 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp\" -I \"./interface\" -I \"/Applications/MATLAB_R2022b.app/extern/include\" -I \".\" -DMODEL=Pendulum_cost_constr_GN_mex -c  interface/_coder_Pendulum_cost_constr_GN_info.c -o build/maci64/_coder_Pendulum_cost_constr_GN_info.o",
+    "file": "interface/_coder_Pendulum_cost_constr_GN_info.c",
+    "output": "build/maci64/_coder_Pendulum_cost_constr_GN_info.o"
+  },
+  {
+    "directory": "/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp/codegen/mex/Pendulum_cost_constr_GN",
+    "command": "/usr/bin/xcrun -sdk macosx13.1 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/federicocorso/Library/CloudStorage/OneDrive-PolitecnicodiMilano/Automation Lab/Rotary-Inverted-Pendolum/src/matlab scripts/MPC_SwingUp\" -I \"./interface\" -I \"/Applications/MATLAB_R2022b.app/extern/include\" -I \".\" -DMODEL=Pendulum_cost_constr_GN_mex -c  /Applications/MATLAB_R2022b.app/extern/version/c_mexapi_version.c -o build/maci64/c_mexapi_version.o",
+    "file": "/Applications/MATLAB_R2022b.app/extern/version/c_mexapi_version.c",
+    "output": "build/maci64/c_mexapi_version.o"
+  }
+]
